@@ -41,4 +41,13 @@ Combined raw total: 933 images
 
 ## Results
 
-To be updated upon project completion.
+| Model | Test Accuracy | AUC-ROC | Sensitivity | Specificity | Errors |
+|---|---|---|---|---|---|
+| SVM (Optimised) | 91.98% | 0.9651 | 92.94% | 91.18% | 15/187 |
+| Random Forest (Optimised) | 87.17% | 0.9396 | 96.47% | 79.41% | 24/187 |
+
+Best model: SVM with 91.98% accuracy and AUC-ROC of 0.9651.
+Random Forest achieves higher sensitivity of 96.47%.
+
+## Research Paper
+Full research paper available in the reports/ folder.
