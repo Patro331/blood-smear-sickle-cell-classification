@@ -10,42 +10,62 @@ microscopy data.
 
 ## Research Gap
 
-Sickle cell disease affects 13.3% of the Ugandan population, yet diagnosis 
-currently requires trained laboratory scientists, specialist microscopes, 
-and manual microscopic examination — resources that are largely unavailable 
-in rural Ugandan settings. Patients in rural areas may go years without a 
-formal diagnosis, missing early treatments that prevent life-threatening 
-crises.
+Sickle cell disease is one of the most prevalent genetic disorders in 
+Uganda, yet it remains one of the most underdiagnosed. The sickle cell 
+trait affects 13.3% of the national population and reaches 19.8% in 
+Kampala alone. An estimated 15,000 to 20,000 children are born with the 
+disease in Uganda each year. Many of these children never receive a formal 
+diagnosis because current diagnostic methods depend entirely on trained 
+laboratory scientists, haemoglobin electrophoresis equipment, and manual 
+microscopic examination of blood smears — resources concentrated in urban 
+hospitals and largely absent from rural district health facilities.
 
-While deep learning has been applied to blood smear image classification, 
-no prior study had applied classical machine learning to the Tushabe et al. 
-(2024) Ugandan clinical mobile-phone microscopy dataset. Furthermore, no 
-study had examined whether classical ML — which requires no GPU 
-infrastructure — could produce clinically useful results on this dataset, 
-making it accessible to health facilities that cannot support deep learning 
-deployment.
+Without early diagnosis, children with sickle cell disease miss 
+prophylactic treatment that prevents life-threatening crises, organ 
+damage, and premature death. The diagnostic gap is not a medical problem 
+— it is an access problem. The knowledge to diagnose sickle cell disease 
+exists. The tools to bring that knowledge to rural Uganda do not.
+
+Automated image analysis using machine learning offers a path to closing 
+this gap. A system that can classify a blood smear photograph taken with 
+a mobile phone on a basic microscope could enable community health workers 
+with no laboratory training to identify patients who need urgent referral. 
+However, for such a system to be deployable in rural Ugandan health 
+facilities, it must run on standard hardware without GPU infrastructure.
+
+Prior machine learning studies on sickle cell detection used datasets 
+collected under controlled laboratory conditions in high-income countries. 
+None had applied classical machine learning to the Tushabe et al. (2024) 
+dataset — the only published dataset of sickle cell blood smear images 
+collected from Ugandan patients using mobile phone microscopy under real 
+clinical conditions. This project addresses that gap directly.
 
 ## Research Objective
 
-This project applies classical machine learning with HOG feature extraction 
-to automate sickle cell detection from peripheral blood smear images captured 
-using mobile phone cameras on basic microscopes in Uganda. The objective is 
-to determine whether classical ML can produce clinically meaningful results 
-on this task and to compare its performance against deep learning models 
-applied to the same dataset in a prior study.
+Sickle cell disease remains largely undiagnosed in rural Uganda due to 
+the absence of trained laboratory personnel and specialist diagnostic 
+equipment. This project develops an automated sickle cell detection 
+system from peripheral blood smear images captured using mobile phone 
+cameras on basic microscopes, with the goal of enabling non-specialist 
+health workers in rural Ugandan settings to screen patients for sickle 
+cell disease without requiring laboratory expertise.
 
 The specific objectives are:
 
-1. Extract numerical features from blood smear images using HOG feature 
-   extraction to create a tabular features matrix suitable for classical ML
-2. Train and evaluate SVM and Random Forest classifiers using standard 
-   supervised learning practice including preprocessing pipelines, 
-   stratified train-test splitting, and cross-validation
-3. Optimise both models using GridSearchCV and analyse overfitting
-4. Compare classical ML performance against deep learning models from a 
-   prior study on the same dataset
-5. Assess the viability of classical ML as a low-resource alternative 
-   to deep learning for sickle cell screening in Uganda
+1. Build an automated classifier that can distinguish sickle cell 
+   positive blood smears from normal smears using images captured 
+   under real Ugandan clinical conditions
+2. Apply classical machine learning methods that can run without GPU 
+   infrastructure, making the system deployable in low-resource 
+   health facilities
+3. Evaluate whether the system achieves clinically meaningful 
+   sensitivity — ensuring missed sickle cell cases are minimised
+4. Assess model reliability through overfitting analysis and 
+   cross-validation to ensure results generalise beyond the 
+   training data
+5. Compare performance against deep learning approaches to 
+   understand the trade-off between computational cost and 
+   diagnostic accuracy
 
 ## Project Overview
 
